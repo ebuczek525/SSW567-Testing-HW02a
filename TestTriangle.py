@@ -22,14 +22,26 @@ class TestTriangles(unittest.TestCase):
     def testRightTriangleB(self):
         self.assertEqual(classifyTriangle(5, 3, 4), 'Right', '5,3,4 is a Right triangle')
 
-    def testEquilateralTriangles(self):
+    def testRightTriangleC(self):
+        self.assertEqual(classifyTriangle(4, 5, 3), 'Right', '4,5,3 is a Right triangle')
+
+    def testEquilateralTriangleA(self):
         self.assertEqual(classifyTriangle(1, 1, 1), 'Equilateral', '1,1,1 should be equilateral')
 
-    def testScaleneTriangle(self):
+    def testEquilateralTriangleB(self):
+        self.assertEqual(classifyTriangle(2, 2, 2), 'Equilateral', '2,2,2 should be equilateral')
+
+    def testScaleneTriangleA(self):
         self.assertEqual(classifyTriangle(2, 3, 4), 'Scalene', '2,3,4 is a Scalene triangle')
 
-    def testIsocelesTriangle(self):
-        self.assertEqual(classifyTriangle(1, 1, 2), 'Right', '1,1,2 is an Isoceles triangle')
+    def testScaleneTriangleB(self):
+        self.assertEqual(classifyTriangle(12, 15, 23), 'Scalene', '12,15,23 is a Scalene triangle')
+
+    def testIsocelesTriangleA(self):
+        self.assertEqual(classifyTriangle(2, 2, 3), 'Isoceles', '2,2,3 is an Isoceles triangle')
+
+    def testIsocelesTriangleB(self):
+        self.assertEqual(classifyTriangle(67, 67, 100), 'Isoceles', '67,67,100 is an Isoceles triangle')
 
     def testValidA(self):
         self.assertEqual(classifyTriangle(201, 1, 2), 'InvalidInput', 'This triangle is not valid')
